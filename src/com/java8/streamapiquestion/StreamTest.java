@@ -192,6 +192,10 @@ public class StreamTest {
 			 * 14. Find the department names that these employees work for, where the number
 			 * of employees in the department is over 3.
 			 */
+            System.out.println("Department names where the number of employees in the department is over 3 :: ");
+            empList.stream().collect(Collectors.groupingBy(Employee::getDeptName, Collectors.counting())).
+            entrySet().stream().filter(entry -> entry.getValue() > 3).forEach(System.out::println);
+            
 	}
 
 }
