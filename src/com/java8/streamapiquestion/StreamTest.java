@@ -708,6 +708,7 @@ public class StreamTest {
             System.out.println(k);
             System.out.println(v.collect(Collectors.toList()));
         });
+        	test
 	}
 
 }
